@@ -1,0 +1,188 @@
+@import "variables";
+@import "mixins";
+@import "../../../lib/bootstrap/scss/variables";
+@import "../../../lib/bootstrap/scss/mixins";
+
+/**
+ * Spinner
+ */
+#graphic-spinner {
+  #triangle {
+    transform: scale(0.4) translate(265px, 285px);
+  }
+
+  #circle {
+    transform: translate(200px, 200px);
+  }
+
+  #circle circle {
+    stroke: black;
+    fill: none;
+    stroke-width: 2.5px;
+    stroke-dasharray: 80 22;
+
+    animation-name: spinner;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+
+  .triangle-path {
+    fill: black;
+    stroke: black;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+  }
+}
+/**
+ * END: Spinner
+ */
+
+
+/**
+ * Beehive
+ */
+.icon-beehive.animated .beehive-fragment {
+  animation-name: icon-beehive;
+}
+
+.beehive-fragment {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.26, 0.23, 0.42, 0.74);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+
+  fill: none;
+  stroke: #4E4E4E;
+  stroke-miterlimit: 10;
+  stroke-width: 2.5px;
+  stroke-dasharray: 40;
+  stroke-linecap: round;
+
+  @include media-breakpoint-up(md) {
+    stroke: white;
+  }
+}
+/**
+ * END: Beehive
+ */
+
+
+/**
+ * Heart
+ */
+.icon-heart.animated {
+  .heart-inner-line {
+    animation-name: icon-heart;
+  }
+
+  .heart-outer-line {
+    animation-name: fade-in;
+  }
+}
+
+.heart-line {
+  fill: none;
+  stroke: #4E4E4E;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+
+  @include media-breakpoint-up(md) {
+    stroke: white;
+  }
+}
+
+.heart-inner-line {
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+
+  stroke-dasharray: 40;
+}
+
+.heart-outer-line {
+  animation-delay: 0.25s;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+}
+/**
+ * END: Heart
+ */
+
+
+/**
+ * Fractal
+ */
+.icon-fractal.animated .fractal-dot {
+  animation-name: fade-in;
+}
+
+.fractal-dot {
+  animation-timing-function: cubic-bezier(0.99, 0.64, 0.69, 0.48);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  //animation-duration: 0.5s;
+
+  opacity: 0;
+  fill: #4E4E4E;
+
+  @include media-breakpoint-up(md) {
+    fill: white;
+  }
+}
+
+@for $i from 1 through 7 {
+  .fractal-family:nth-of-type(#{$i}) {
+    @for $j from 1 through 8 - $i {
+      .fractal-dot:nth-of-type(#{$j}) {
+        animation-delay: #{0.05 * $j + $i / 4}s;
+      }
+    }
+  }
+}
+/**
+ * END: Fractal
+ */
+
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes icon-beehive {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+@keyframes icon-heart {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

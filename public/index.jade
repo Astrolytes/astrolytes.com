@@ -1,0 +1,68 @@
+doctype html
+head
+    != partial("_partials/head")
+body(class="#{current.path}")
+    != partial("_partials/header")
+    main#fullpage
+        section#intro(data-anchor="home")
+            .container
+                #bgimg
+                .intro-content.text-md-center
+                    img.intro-logotype(src="/assets/images/logo/astrolytes.svg")
+                    p.tagline
+                        span.tagline-bigger A Real-time peer-to-peer 
+                        span.tagline-middle &nbsp;Cyber Threat Sharing Platform
+                    .tagline-smaller.text-md-center Enabling secure trusted cyber threat information sharing and coordination at scale.
+                button.next-section.center-block.btn.btn-clean.hidden-md-down
+                    i.fa.fa-angle-double-down.fa-2x
+        section#imagine(data-anchor="imagination")
+            .row-with-illustration.homepage-section-wrapper
+                .text-content
+                    h2 What If
+                    p Cybersecurity teams within enterprise communities could interact over a network that enabled them to defeat cyber threats cooperatively by coordinating and sharing cyber threat information? Today our cybersecurity defense expertise exists in silos, but imagine if they operated like nodes in this network.
+
+                    p Our mission is to create the foundation for a cybersecurity ecosystem -- a decentralized cybersecurity framework that standardizes and incentivizes cooperation and measurable risk management practices among peers.
+        section#protocol(data-anchor="protocol")
+            h2.protocol-title.text-md-center
+                small Elements of Our Decentralized
+                br
+                | Cybersecurity Threat Sharing Platform
+            .protocol-section.homepage-section-wrapper
+                p.protocol-subtitle.text-md-center The platform contains a distributed governance system allowing for the collaborative creation and analysis of emerging cyber threat intelligence and distribution among networks of trusted peers.
+                p.hidden-md-up.lead.m-t-3 The Astrolytes platform provides...
+                .protocol-features
+        section#protocol-feature-1(data-anchor="protocol-feature-a")
+            .protocol-feature.homepage-section-wrapper
+                div
+                    h3.protocol-feature-title Feedback at the Core
+                    p.protocol-feature-description The platform is designed to provide feedback loops in real-time between analysts' actions and content unlike any enterprise platform.
+        section#protocol-feature-2(data-anchor="protocol-feature-b")
+            .protocol-feature.homepage-section-wrapper
+                div
+                    h3.protocol-feature-title Great UX & Learning
+                    p.protocol-feature-description Great software doesn't just have to "work", but it has to delight and make learning and discovery an integral experience.
+        section#team(data-anchor="team")
+            h2.team-title.text-md-center The Team
+            .team-section.homepage-section-wrapper
+                .team-features
+        section#team-feature-1(data-anchor="team-feature-a")
+            .team-feature.homepage-section-wrapper
+                div
+                    h3.team-feature-title Terry J. Leach
+                    p.team-feature-description 
+                        ul
+                            li Lead Information Architect for modernizing TSA’s Security Threat Assessment Systems vetting millions of transportation workers.
+                            li Entrepreneur and IT consultant for finance, health care, and telecom industries. Founder Institute graduate.
+                            li Former Signals Intelligence Analyst and Systems Engineer.
+        section#team-feature-2(data-anchor="team-feature-b")
+            .team-feature.homepage-section-wrapper
+                div
+                    h3.team-feature-title Greg Dimmie
+                    p.team-feature-description 
+                        ul
+                            li Federal Security Information Event Management (SIEM) Subject Matter Expert.
+                            li Independent Security product engineering and entrepreneur.
+                            li Security Product Sales engineer.
+        section#footer
+            != partial("_partials/footer")
+    != partial("_partials/scripts")

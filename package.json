@@ -1,0 +1,24 @@
+{
+  "name": "astrolytes.com",
+  "version": "1.0.0",
+  "description": "astrolytes.com built with Harp.js\r ==============================",
+  "main": "../index.html",
+  "scripts": {
+    "compile": "harp compile . && cp CNAME www",
+    "server": "gulp bower-extract && harp server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Backfeed/Backfeed-Website.git"
+  },
+  "author": "Backfeed <info@backfeed.cc> (http://backfeed.cc/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Backfeed/Backfeed-Website/issues"
+  },
+  "homepage": "https://github.com/Backfeed/Backfeed-Website#readme",
+  "dependencies": {
+    "gulp": "3.9.0",
+    "main-bower-files": "2.11.1"
+  }
+}

@@ -1,0 +1,239 @@
+@import "variables";
+@import "mixins";
+@import "../../../lib/bootstrap/scss/variables";
+@import "../../../lib/bootstrap/scss/mixins";
+
+#team {
+  background-color: $gray-dark;
+  background-size: 90%;
+
+  .team-title {
+    display: block;
+  }
+
+  @include media-breakpoint-down(sm) {
+    p {
+      color: #4d4d4d;
+
+      &.lead {
+        color: #363636;
+        font-size: 14px;
+        font-weight: 600;
+        align-self: flex-start;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    background: transparent url("/assets/images/protocol_r.jpg") repeat scroll 0 0;
+    background-size: cover;
+
+    p {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .fp-viewing-team,
+  .fp-viewing-team-feature-a,
+  .fp-viewing-team-feature-b,
+  .fp-viewing-team-feature-c {
+    .team-title {
+      display: block;
+    }
+  }
+
+  #team,
+  #team-feature-1,
+  #team-feature-2,
+  #team-feature-3 {
+    .fp-tableCell {
+      padding-top: $height-team-title;
+    }
+  }
+}
+
+.team-title {
+  display: none;
+  font-size: 3.076923076923077rem;
+  padding: 10px 15px;
+  z-index: 1;
+  color: white;
+
+  width: 100%;
+  font-weight: 500;
+
+  @include media-breakpoint-down(sm) {
+    background: transparent linear-gradient(to bottom, rgb(15, 15, 15) 0%, rgb(36, 36, 36) 100%) repeat scroll 0 0;
+    position: absolute;
+    top: $height-header;
+    font-size: 18px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-height: 660px) {
+    padding: 20px 15px;
+  }
+
+  small {
+    font-size: 14px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+  }
+}
+
+.team-subtitle {
+  max-width: 748px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+
+  @media (min-height: 660px) {
+    margin-bottom: 1rem;
+  }
+
+}
+
+.team-section {
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    color: #cbcbcb;
+  }
+
+  &>p {
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+  }
+}
+
+.team-features {
+  display: none;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 1rem;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+
+  @include media-breakpoint-up(lg) {
+    justify-content: center;
+  }
+
+  @media (min-height: 660px) {
+    margin-top: 4rem;
+  }
+
+}
+
+.team-feature {
+  flex-direction: column;
+  flex-basis: 100%;
+
+  hr {
+    border-top: 0;
+    height: 1px;
+    background: #858585;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-basis: 280px;
+
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-basis: 300px;
+
+    &:not(:last-of-type) {
+      margin-right: 7rem;
+    }
+
+    hr {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.team-icon {
+  width: 75px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+
+  @include media-breakpoint-up(md) {
+    text-align: center;
+  }
+
+  &.animated {
+    visibility: visible;
+  }
+}
+
+.team-feature-title {
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 300;
+
+  @include media-breakpoint-up(md) {
+    color: white;
+    text-align: left;
+  }
+
+  @media (min-height: 660px) {
+    margin-bottom: 22px;
+  }
+
+}
+
+.team-feature-description {
+  max-width: 370px;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    max-width: none;
+  }
+
+  @media (max-height: 659px) {
+    line-height: 1.25;
+  }
+
+}
+
+.team-more-button {
+  @include media-breakpoint-landscape {
+    @media (max-height: 730px) {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  #team-feature-1 .team-feature-title::before {
+    content: '1. ';
+  }
+
+  #team-feature-2 .team-feature-title::before {
+    content: '2. ';
+  }
+
+  #team-feature-3 .team-feature-title::before {
+    content: '3. ';
+  }
+}
+

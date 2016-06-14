@@ -1,0 +1,52 @@
+/**
+ * BOOTSTRAP OVERRIDES
+ */
+$gray-dark: #1e1e1e;
+$gray: #252525;
+$gray-light: #393939;
+$gray-lighter: #4a4a4a;
+$brand-primary: #b80443;
+
+$enable-flex:               true;
+//$enable-rounded:            true;
+//$enable-shadows:            false;
+//$enable-gradients:          false;
+//$enable-transitions:        false;
+//$enable-hover-media-query:  false;
+//$enable-grid-classes:       true;
+
+$body-color: #878787;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 1366px,
+  xl: 1920px
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 1306px,
+  xl: 1306px
+);
+
+$grid-gutter-width: 30px;
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-size-root: 13px;
+$font-size-h1: 1.692rem;
+$font-size-h2: 1.846153846153846rem;
+$font-size-h3: 1.153846153846154rem;
+$headings-font-family: 'trajan-sans-pro', sans-serif;
+$headings-font-weight: 600;
+$headings-color: #3b3b3b;
+$hr-border-color: #414141;
+
+/**
+ * CUSTOM
+ */
+$height-header: 55px;
+$height-protocol-title: 82px;
+$height-team-title: 82px;

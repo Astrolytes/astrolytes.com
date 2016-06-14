@@ -1,0 +1,29 @@
+footer
+    img.footer-logo(src="/assets/images/logo/astrolytes.svg", alt="Backfeed Logo", width="226", height="74")
+    form.subscribe-form(
+        action="//backfeed.us11.list-manage.com/subscribe/post?u=bd91582a4e889f710affca0e6&amp;id=751789a3be",
+        method="post",
+        name="mc-embedded-subscribe-form",
+        target="_blank",
+        novalidate
+    )
+        h3.footer-title sign up for the newsletter
+        .form-group
+            label.sr-only(for="mce-EMAIL") Subscribe to our mailing list
+            input#mce-EMAIL.form-control.form-control-lg(type="email", value="", name="EMAIL", placeholder="Email", required)
+        input(type="hidden", name="", tabindex="-1", value="")
+        .text-xs-center
+            input.btn.btn-primary(type="submit", value="Subscribe", name="subscribe")
+    ul.community.list-unstyled
+        li
+            a(href="http://twitter.com/AstrolytesCyber", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                | Twitter
+        li
+            a(href="mailto:info@astrolytes.com", target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-envelope.fa-stack-1x.fa-inverse
+                | Email

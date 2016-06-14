@@ -1,0 +1,68 @@
+@import "variables";
+@import "mixins";
+
+@import "bootstrap";
+@import "buttons";
+@import "graphics";
+
+@import "header";
+@import "footer";
+@import "menu";
+
+@import "homepage";
+@import "homepage-protocol";
+@import "homepage-team";
+@import "homepage-partners";
+
+html {
+  height: 100%;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+html.wf-active .spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+main:not(.fullpage-wrapper) {
+  padding-top: $height-header;
+}
+
+h1,
+.h1 {
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
+}
+
+.form-group.less-width {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mc_embed_signup {
+  background-color: transparent;
+}
+
+.list-unstyled {
+  margin-bottom: 0;
+}

@@ -1,0 +1,25 @@
+.team-member.m-b-1.m-r-1
+    img.img-circle.img-fluid.m-x-auto.m-b-1(src="/assets/images/"+member.image_file)
+    h2= member.name
+    p.member-role= member.role
+    .social-icons
+        each link, network in member.social_profiles
+            case network
+                when "linkedin"
+                    - icon = "fa-linkedin"
+                when "twitter"
+                    - icon = "fa-twitter"
+                when "legal"
+                    - icon = "fa-gavel"
+                when "medium"
+                    - icon = "fa-medium"
+                when "facebook"
+                    - icon = "fa-facebook"
+                when "website"
+                    - icon = "fa-home"
+                default
+                    - icon = "fa-ellipsis-v"
+            a(href=link, target="_blank")
+                span.fa-stack
+                    i.fa.fa-circle.fa-stack-2x
+                    i.fa.fa-stack-1x.fa-inverse(class=icon)
