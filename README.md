@@ -13,7 +13,7 @@ $ sudo npm install -g surge
 
 2) Clone this repository
 ```
-git@github.com:Astrolytes/astrolytes.com.git
+$ git clone git@github.com:Astrolytes/astrolytes.com.git
 ```
 
 3) Start Harp server from within the `_harp` directory
