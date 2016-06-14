@@ -5,7 +5,7 @@
   "main": "../index.html",
   "scripts": {
     "compile": "harp compile . && cp CNAME www",
-    "server": "gulp bower-extract && harp server"
+    "start": "gulp bower-extract && harp server"
   },
   "repository": {
     "type": "git",
